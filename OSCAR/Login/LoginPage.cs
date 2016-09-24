@@ -9,9 +9,9 @@ namespace OSCAR.Login
 {
     public class LoginPage : MyElelment
     {
-            public LoginPage()
+            public LoginPage(IWebDriver driver)
         {
-            PageFactory.InitElements(Utilities.Common.driver, this);
+            PageFactory.InitElements(driver, this);
 
         }
   
@@ -35,7 +35,7 @@ namespace OSCAR.Login
         // Login Method
         public void LoginAimy(IWebDriver driver, string userName, string password)
         { 
-            Utilities.Common.TitleValidation(Utilities.Common.driver, "Title of Login Page Validation", "Login - AIMY");
+            Utilities.Common.TitleValidation(driver, "Title of Login Page Validation", "Login - AIMY");
 
             EnterData(driver, userName, password);
 
@@ -47,7 +47,7 @@ namespace OSCAR.Login
        
         public int EnterData(IWebDriver driver, string userName, string password)
         {
-            WebDriverWait wait = new WebDriverWait(Utilities.Common.driver, TimeSpan.FromSeconds(30));
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
             try
             {
                 wait.Until(ExpectedConditions.ElementToBeClickable(btnLogin));

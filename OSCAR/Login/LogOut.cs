@@ -11,7 +11,7 @@ namespace OSCAR.Login
 
         public LogOut()
         {
-            PageFactory.InitElements(Utilities.Common.driver, this);
+            PageFactory.InitElements(driver, this);
 
         }
       
@@ -21,7 +21,7 @@ namespace OSCAR.Login
 
          public void LogOutAimy(IWebDriver driver)
         {
-            WebDriverWait wait = new WebDriverWait(Utilities.Common.driver, TimeSpan.FromSeconds(15));
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(15));
             // User menu Dropdown with Hover mouse
             // Actions builder = new Actions(driver);
             AimyClick(driver.FindElement(By.XPath("html/body/nav/div/div[2]/ul[2]/li[1]/a[1]")));

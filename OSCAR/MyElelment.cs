@@ -6,15 +6,12 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using OSCAR.Utilities;
 
 namespace OSCAR
 {
-    public class MyElelment
+    public class MyElelment : Common
     {
-        public static IWebDriver driver { get; set; }
-
-  
-
         public static void AimySendKeys(IWebElement element, string sText)
         {
             try

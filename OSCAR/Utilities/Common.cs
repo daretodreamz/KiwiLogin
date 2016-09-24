@@ -16,7 +16,7 @@ namespace OSCAR.Utilities
     {
 
         // Auto element properties  IWebDriver driver
-        public static IWebDriver driver { get; set; }
+        public IWebDriver driver { get; set; }
 
         public static IEnumerable<string> BrowserToRunWith()
         {
